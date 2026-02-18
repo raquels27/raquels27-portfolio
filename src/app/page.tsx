@@ -1,64 +1,73 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Portfolio() {
-  const projects = [
-    { title: "Project One", desc: "A brief description of what you built.", tech: ["React", "Next.js"] },
-    { title: "Project Two", desc: "Another cool project goes here.", tech: ["Tailwind", "TypeScript"] },
-    { title: "Project Three", desc: "Showcase your best work.", tech: ["Node.js", "PostgreSQL"] },
-  ];
-
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
-      {/* Navigation */}
-      <nav className="p-6 flex justify-between items-center max-w-5xl mx-auto">
-        <h1 className="text-xl font-bold tracking-tighter">YOUR_NAME</h1>
-        <div className="space-x-6 text-sm font-medium">
-          <a href="#projects" className="hover:text-blue-600 transition">Projects</a>
-          <a href="#about" className="hover:text-blue-600 transition">About</a>
-          <a href="mailto:your@email.com" className="bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-700 transition">Contact</a>
+    <div className="min-h-screen bg-[#FDFDFD] text-[#1a1a1a] selection:bg-blue-50">
+      {/* Subtle Navigation */}
+      <nav className="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <span className="text-sm font-bold tracking-tighter uppercase">Your Name</span>
+        <div className="flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-zinc-400">
+          <a href="#work" className="hover:text-black transition-colors">Work</a>
+          <a href="#about" className="hover:text-black transition-colors">About</a>
+          <a href="mailto:hello@yoursite.com" className="hover:text-black transition-colors">Contact</a>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 py-24 text-center md:text-left">
-        <h2 className="text-5xl md:text-7xl font-extrabold mb-6">
-          Building digital <span className="text-blue-600">experiences</span>.
-        </h2>
-        <p className="text-xl text-slate-600 max-w-2xl mb-8">
-          I'm a developer specializing in building exceptional digital products. 
-          Currently focused on creating accessible, human-centered web applications.
-        </p>
-        <div className="flex justify-center md:justify-start space-x-4">
-          <Github className="cursor-pointer hover:text-blue-600" />
-          <Linkedin className="cursor-pointer hover:text-blue-600" />
-          <Mail className="cursor-pointer hover:text-blue-600" />
-        </div>
-      </section>
-
-      {/* Projects Grid */}
-      <section id="projects" className="max-w-5xl mx-auto px-6 py-20">
-        <h3 className="text-2xl font-bold mb-10">Selected Work</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((p, i) => (
-            <div key={i} className="group border border-slate-200 p-6 rounded-2xl bg-white hover:shadow-xl transition-all">
-              <div className="flex justify-between mb-4">
-                <div className="h-10 w-10 bg-slate-100 rounded-lg"></div>
-                <ExternalLink size={18} className="text-slate-400 group-hover:text-blue-600" />
-              </div>
-              <h4 className="text-lg font-bold mb-2">{p.title}</h4>
-              <p className="text-slate-500 text-sm mb-4">{p.desc}</p>
-              <div className="flex gap-2">
-                {p.tech.map(t => <span key={t} className="text-[10px] font-bold uppercase tracking-wider bg-slate-100 px-2 py-1 rounded">{t}</span>)}
-              </div>
+      <main className="max-w-6xl mx-auto px-6">
+        {/* Hero Section */}
+        <section className="pt-24 pb-32 md:pt-40 md:pb-48">
+          <h1 className="text-6xl md:text-[120px] font-medium tracking-[-0.04em] leading-[0.85] mb-12">
+            Digital <br />
+            <span className="text-zinc-300">Designer</span> & <br />
+            Developer
+          </h1>
+          
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+            <p className="max-w-sm text-lg text-zinc-500 leading-snug">
+              Creating minimalist interfaces and robust web experiences with a focus on typography and white space.
+            </p>
+            <div className="flex gap-6">
+               <Github size={20} className="text-zinc-400 hover:text-black cursor-pointer transition-colors" />
+               <Linkedin size={20} className="text-zinc-400 hover:text-black cursor-pointer transition-colors" />
+               <Mail size={20} className="text-zinc-400 hover:text-black cursor-pointer transition-colors" />
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 mt-20 py-10 text-center text-slate-400 text-sm">
-        © {new Date().getFullYear()} Your Name. Built with Next.js.
+        {/* Projects Section */}
+        <section id="work" className="pb-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            {/* Project 1 */}
+            <div className="group cursor-pointer">
+              <div className="aspect-[16/10] bg-zinc-100 rounded-sm overflow-hidden mb-6 relative">
+                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <ArrowUpRight className="text-white" size={32} />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-widest mb-1">Project One</h3>
+              <p className="text-zinc-400 text-sm">Next.js / Creative Direction</p>
+            </div>
+
+            {/* Project 2 */}
+            <div className="group cursor-pointer md:mt-24">
+              <div className="aspect-[16/10] bg-zinc-100 rounded-sm overflow-hidden mb-6 relative">
+                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <ArrowUpRight className="text-white" size={32} />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-widest mb-1">Project Two</h3>
+              <p className="text-zinc-400 text-sm">React / UI Design</p>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+      <footer className="max-w-6xl mx-auto px-6 py-12 border-t border-zinc-100 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+        <span>© 2026 Your Name</span>
+        <span>Built with Next.js</span>
       </footer>
     </div>
   );
