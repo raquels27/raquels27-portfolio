@@ -3,7 +3,15 @@
 import { useState } from 'react';
 import { Copy, Check, Mail } from 'lucide-react';
 
-export default function CopyEmail({ email }: { email: string }) {
+interface CopyEmailProps {
+  email: string;
+  textColor?: string; // optional
+}
+
+export default function CopyEmail({ 
+  email, 
+  textColor = "text-zinc-600", 
+}: CopyEmailProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -25,7 +33,7 @@ export default function CopyEmail({ email }: { email: string }) {
         className="flex items-center gap-3 hover:opacity-70 transition-opacity"
       >
         <Mail size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
-        <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors">
+        <span className={`text-[11px] font-bold uppercase tracking-widest ${textColor} group-hover:text-black transition-colors`}>
           {email}
         </span>
       </a>
@@ -39,7 +47,7 @@ export default function CopyEmail({ email }: { email: string }) {
         {copied ? (
           <Check size={14} className="text-emerald-500 animate-in zoom-in duration-300" />
         ) : (
-          <Copy size={14} className="text-zinc-600 hover:text-black transition-colors" />
+          <Copy size={14} className={`${textColor} hover:text-black transition-colors`} />
         )}
         
         {/* Tooltip for "Copied!" feedback */}

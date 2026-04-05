@@ -34,11 +34,11 @@ export default function ContactPage() {
 
         {/* Email */}
         <div className="flex flex-col items-center">
-          <h2 className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500 mb-4">
+          <h2 className="text-[12px] font-bold uppercase tracking-[0.3em] text-zinc-500 mb-4">
             Email
           </h2>
-          <div className="scale-125 origin-center">
-             <CopyEmail email="EMAIL_REMOVED" />
+          <div className="scale-125 md:scale-150 origin-center">
+             <CopyEmail email="EMAIL_REMOVED" textColor="text-[#1a1a1a]"/>
           </div>
         </div>
       </div>

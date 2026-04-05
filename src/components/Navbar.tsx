@@ -88,13 +88,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Footer */}
         <div className="mt-auto border-t border-zinc-100 pt-8 pb-12">
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 mb-6">Socials</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600 mb-6">Socials</p>
           <div className="flex gap-8 text-sm font-medium">
             <a 
               href="https://LINKEDIN_REMOVED" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-zinc-500 hover:text-black transition-colors duration-300"
+              className="text-[#1a1a1a] hover:text-black transition-colors duration-300"
             >
               LinkedIn
             </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
               href="https://GITHUB_REMOVED" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-zinc-500 hover:text-black transition-colors duration-300"
+              className="text-[#1a1a1a] hover:text-black transition-colors duration-300"
             >
               GitHub
             </a>
