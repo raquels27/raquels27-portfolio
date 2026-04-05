@@ -1,10 +1,11 @@
 "use client";
 
-import { Github, Linkedin } from 'lucide-react';
-import CopyEmail from "@/components/CopyEmail";
+import { Github, Linkedin, Mail } from 'lucide-react';
+import CopyText from "@/components/CopyText";
 
 
 export default function HomePage() {
+  const email = "EMAIL_REMOVED"
 
   return (
     <div className="min-h-screen bg-[#FDFDFD] text-[#1a1a1a] selection:bg-blue-50">
@@ -53,7 +54,18 @@ export default function HomePage() {
                     </span>
                   </a>
 
-                  <CopyEmail email="EMAIL_REMOVED" />
+                  <div className="flex items-center gap-2 group/email">
+                    <a 
+                      href={`mailto:${email}`}
+                      className="flex items-center gap-3 hover:opacity-70 transition-opacity"
+                    >
+                      <Mail size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
+                      <span className={`text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors`}>
+                        {email}
+                      </span>
+                    </a>
+                    <CopyText textToCopy={`${email}`} />
+                  </div>
 
                 </div>
               </div>

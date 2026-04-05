@@ -1,22 +1,22 @@
 "use client";
 
 import { useState } from 'react';
-import { Copy, Check, Mail } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 
-interface CopyEmailProps {
-  email: string;
+interface CopyTextProps {
+  textToCopy: string;
   textColor?: string; // optional
 }
 
-export default function CopyEmail({ 
-  email, 
+export default function CopyText({ 
+  textToCopy, 
   textColor = "text-zinc-600", 
-}: CopyEmailProps) {
+}: CopyTextProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(email);
+      await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
       // Resets the "Check" icon back to "Copy" after 2 seconds
       setTimeout(() => setCopied(false), 2000);
@@ -27,17 +27,6 @@ export default function CopyEmail({
 
   return (
     <div className="flex items-center gap-3 group">
-      {/* The Actual Mailto Link */}
-      <a 
-        href={`mailto:${email}`} 
-        className="flex items-center gap-3 hover:opacity-70 transition-opacity"
-      >
-        <Mail size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
-        <span className={`text-[11px] font-bold uppercase tracking-widest ${textColor} group-hover:text-black transition-colors`}>
-          {email}
-        </span>
-      </a>
-
       {/* The Copy Button */}
       <button 
         onClick={handleCopy}
