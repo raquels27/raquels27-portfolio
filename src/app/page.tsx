@@ -5,7 +5,7 @@ import CopyText from "@/components/CopyText";
 
 
 export default function HomePage() {
-  const email = "EMAIL_REMOVED"
+  const email = process.env.NEXT_PUBLIC_EMAIL || ""
 
   return (
     <div className="min-h-screen bg-[#FDFDFD] text-[#1a1a1a] selection:bg-blue-50">
@@ -31,26 +31,26 @@ export default function HomePage() {
                 {/* Links to Socials */}
                 <div className="flex flex-col gap-6 mt-8">
                   <a 
-                    href="https://GITHUB_REMOVED" 
+                    href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB}`} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group flex items-center gap-3"
                   >
                     <Github size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
                     <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors">
-                      GITHUB_REMOVED
+                      github.com/{process.env.NEXT_PUBLIC_GITHUB}
                     </span>
                   </a>
 
                   <a 
-                    href="https://LINKEDIN_REMOVED" 
+                    href={`https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}`}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group flex items-center gap-3"
                   >
                     <Linkedin size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
                     <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors">
-                      LINKEDIN_REMOVED
+                      linkedin.com/in/{process.env.NEXT_PUBLIC_LINKEDIN}`
                     </span>
                   </a>
 

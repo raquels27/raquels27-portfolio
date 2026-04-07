@@ -68,7 +68,7 @@ export default function ExperiencePage() {
 
             {/* Resume Button */}
             <a 
-                href="/RaquelASaldivar_Resume.pdf" 
+                href={process.env.NEXT_PUBLIC_RESUME_LINK}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-white border border-zinc-200 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white hover:border-black transition-all duration-500 group shadow-sm w-fit"

@@ -3,9 +3,9 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function ContactPage() {
   const contactLinks = [
-    { label: "GitHub", value: "GITHUB_REMOVED", href: "https://GITHUB_REMOVED" },
-    { label: "LinkedIn", value: "LINKEDIN_REMOVED", href: "https://LINKEDIN_REMOVED" },
-    { label: "Email", value: "EMAIL_REMOVED", href: "mailto:EMAIL_REMOVED" },
+    { label: "GitHub", value: `github.com/${process.env.NEXT_PUBLIC_GITHUB}`, href: `https://github.com/${process.env.NEXT_PUBLIC_GITHUB}` },
+    { label: "LinkedIn", value: `linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}`, href: `https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}` },
+    { label: "Email", value: process.env.NEXT_PUBLIC_EMAIL || "", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}` },
   ];
 
   return (
