@@ -5,7 +5,7 @@ export default function ContactPage() {
   const contactLinks = [
     { label: "GitHub", value: `github.com/${process.env.NEXT_PUBLIC_GITHUB}`, href: `https://github.com/${process.env.NEXT_PUBLIC_GITHUB}` },
     { label: "LinkedIn", value: `linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}`, href: `https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}` },
-    { label: "Email", value: process.env.NEXT_PUBLIC_EMAIL || "", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}` },
+    // { label: "Email", value: process.env.NEXT_PUBLIC_EMAIL || "", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}` },
   ];
 
   return (

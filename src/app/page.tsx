@@ -54,7 +54,7 @@ export default function HomePage() {
                     </span>
                   </a>
 
-                  <div className="flex items-center gap-2 group/email">
+                  {/* <div className="flex items-center gap-2 group/email">
                     <a 
                       href={`mailto:${email}`}
                       className="flex items-center gap-3 hover:opacity-70 transition-opacity"
@@ -65,7 +65,7 @@ export default function HomePage() {
                       </span>
                     </a>
                     <CopyText textToCopy={`${email}`} />
-                  </div>
+                  </div> */}
 
                 </div>
               </div>
