@@ -12,9 +12,8 @@ export default function Navbar() {
     const navLinks = [
       { name: "Home", href: "/" },
       { name: "Experience", href: "/experience" },
-      { name: "Certifications", href: "/certifications" },
       { name: "Skills", href: "/skills" },
-      { name: "Contact", href: "/contact" },
+      { name: "Certifications", href: "/certifications" },
     ];
 
     useEffect(() => {
@@ -91,7 +90,7 @@ export default function Navbar() {
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600 mb-6">Socials</p>
           <div className="flex gap-8 text-sm font-medium">
             <a 
-              href="https://LINKEDIN_REMOVED" 
+              href={`https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}`}
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#1a1a1a] hover:text-black transition-colors duration-300"
@@ -99,7 +98,7 @@ export default function Navbar() {
               LinkedIn
             </a>
             <a 
-              href="https://GITHUB_REMOVED" 
+              href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#1a1a1a] hover:text-black transition-colors duration-300"

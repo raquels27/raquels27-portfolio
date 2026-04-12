@@ -1,7 +1,6 @@
 "use client";
 
 import { Github, Linkedin, Mail } from 'lucide-react';
-import CopyText from "@/components/CopyText";
 
 
 export default function HomePage() {
@@ -29,45 +28,30 @@ export default function HomePage() {
                 </p>
 
                 {/* Links to Socials */}
-                <div className="flex flex-col gap-6 mt-8">
+                <div className="flex justify-start space-x-10 md:pt-12">
                   <a 
-                    href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-3"
-                  >
-                    <Github size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors">
-                      github.com/{process.env.NEXT_PUBLIC_GITHUB}
-                    </span>
-                  </a>
-
-                  <a 
-                    href={`https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}`}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-3"
-                  >
-                    <Linkedin size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors">
-                      linkedin.com/in/{process.env.NEXT_PUBLIC_LINKEDIN}`
-                    </span>
-                  </a>
-
-                  {/* <div className="flex items-center gap-2 group/email">
+                      href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-3"
+                    >
+                      <Github className="cursor-pointer hover:text-black" />
+                    </a>
+                    <a 
+                      href={`https://linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN}`}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-3"
+                    >
+                      <Linkedin className="cursor-pointer hover:text-black" />
+                    </a>
                     <a 
                       href={`mailto:${email}`}
                       className="flex items-center gap-3 hover:opacity-70 transition-opacity"
                     >
-                      <Mail size={18} className="text-zinc-600 group-hover:text-black transition-colors" />
-                      <span className={`text-[11px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black transition-colors`}>
-                        {email}
-                      </span>
+                      <Mail className="cursor-pointer hover:text-black" />
                     </a>
-                    <CopyText textToCopy={`${email}`} />
-                  </div> */}
-
-                </div>
+                  </div>
               </div>
             </div>
 
