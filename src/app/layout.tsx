@@ -20,8 +20,8 @@ const playfair = Playfair_Display({
 
 // Defines the display on website tab
 export const metadata: Metadata = {
-  title: "Raquel Saldivar | Software Developer & Data Engineer",
-  description: "Portfolio of Raquel Saldivar",
+  title: "Raquel A. Saldivar | Software Developer & Data Engineer",
+  description: "Portfolio of Raquel A. Saldivar",
 };
 
 

@@ -38,7 +38,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           
           <Link href="/" className="text-sm font-bold uppercase z-[70]">
-            Raquel Saldivar
+            Raquel A. Saldivar
           </Link>
           
           {/* Desktop Links */}

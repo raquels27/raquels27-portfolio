@@ -17,7 +17,7 @@ export default function HomePage() {
             {/* Left Side: Headline & Intro */}
             <div className="md:w-2/3">
               <h1 className="font-serif text-5xl md:text-[70px] tracking-tight leading-[0.85] mb-12">
-                Raquel Saldivar
+                Raquel A. Saldivar
               </h1>
               
               <div className="flex flex-col gap-8">
